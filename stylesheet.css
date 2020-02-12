@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+#container {
+  display: grid;
+  justify-content: center;
+}
+#dashes {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+.title {
+  border: 1px solid black;
+  text-align: center;
+}
+.underScores {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 3px;
+  margin-top: 0;
+  font-size: 2em;
+}
+#turnsLeft {
+  border: 1px solid black;
+  text-align: center;
+}
+#word {
+  border: 1px solid black;
+  text-align: center;
+}
+#letterButtons {
+  border: 1px solid black;
+}
