@@ -9,14 +9,15 @@ html {
 #container {
   display: grid;
   justify-content: center;
+  justify-items: center;
 }
 #dashes {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+
+  letter-spacing: 10px;
 }
 .title {
-  border: 1px solid black;
   text-align: center;
 }
 .underScores {
@@ -27,13 +28,12 @@ html {
   font-size: 2em;
 }
 #turnsLeft {
-  border: 1px solid black;
   text-align: center;
 }
 #word {
-  border: 1px solid black;
   text-align: center;
 }
 #letterButtons {
-  border: 1px solid black;
+}
+#newGame {
 }

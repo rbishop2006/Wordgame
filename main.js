@@ -1,23 +1,34 @@
 $(document).ready(function() {
-  var newWords = commonWords.filter(function(a) {
-    return a.length > 2
-  })
-  var gameWord = newWords[Math.floor(Math.random() * newWords.length)]
-  var sepChar = gameWord.split("")
+  newButtons()
+  var turns = 8
+  var letterClicked = ""
+  var word = underS
+  $(".button").on("click", function(e) {
+    e.preventDefault()
+    currentClicked = $(this).html()
+    letterClicked = currentClicked
+    $(this).attr("disabled", true)
 
-  var dashUnder = "_"
-  var underS = sepChar.map(function() {
-    return `
-    <p class="underScores">${dashUnder}</p>
-    `
+    for (i = 0; i < gameWord.length; i++) {
+      if (letterClicked === gameWord.charAt(i)) {
+        answers = word.split("")
+        answers[i] = letterClicked
+
+        word = answers.join("")
+      }
+    }
+    if (word.includes(letterClicked)) {
+      turns = turns
+    } else {
+      turns--
+    }
+    if (turns == 0) {
+      $("#letterButtons").html("Game Over")
+    }
+    if (word == gameWord) {
+      $("#letterButtons").html("You Won!!!")
+    }
+    $("#dashes").html(word)
+    $("#turnsLeftInGame").html(`Turns left ${turns}`)
   })
-  $("#word").html(gameWord)
-  $("#dashes").html(underS)
-  $("#letterButtons").html(letters)
-  $("#turnsLeft").html(`Number of turns 8`)
-  console.log(gameWord)
-  console.log(sepChar)
-  console.log(alphabet)
 })
-
-// document.getElementById("dashes").innerHTML = `${sepChar}`
