@@ -29,6 +29,6 @@ $(document).ready(function() {
       $("#letterButtons").html("You Won!!!")
     }
     $("#dashes").html(word)
-    $("#turnsLeftInGame").html(`Turns left ${turns}`)
+    $("#turnsLeftInGame").html(`Guesses left ${turns}`)
   })
 })
