@@ -6,34 +6,49 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/* * {
+  border: 1px solid black; */
+/* } */
 #container {
   display: grid;
   justify-content: center;
   justify-items: center;
+  background-color: seagreen;
+  font-family: sans-serif;
+}
+.title {
+  text-align: center;
+  margin: none;
+  color: lightblue;
+  font-size: 2em;
 }
 #dashes {
   display: flex;
   justify-content: center;
-
   letter-spacing: 10px;
+  font-size: 5em;
 }
-.title {
-  text-align: center;
-}
-.underScores {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 3px;
-  margin-top: 0;
+#turnsLeftInGame {
   font-size: 2em;
-}
-#turnsLeft {
-  text-align: center;
 }
 #word {
   text-align: center;
 }
 #letterButtons {
+  padding: 8px;
+}
+.button {
+  margin: 5px;
+  outline: none;
+  border-radius: 3px;
+  font-size: 2.5em;
 }
 #newGame {
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 50%;
+  background-color: lightblue;
+  color: darkblue;
+  outline: none;
+  margin: 30px;
 }
